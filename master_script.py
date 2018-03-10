@@ -4,6 +4,7 @@ import os
 clear = lambda: os.system('cls')
 from functions import new_save
 from functions import load_save
+from sequences import intro_sequence
 
 game_state = 0
 print("Journey Down")
@@ -32,7 +33,5 @@ clear()
 
 #New game tutorial and beginning sequence
 if new_game == 1 :
-    print("Tutorial: Press enter to advance through dialogue. Type in commands when given a prompt. (Press enter to continue.)")
-    input()
-    print("You find yourself standing at the mouth of a cave, with no memory of who you are or how you have gotten there.")
-    input()
+    intro_sequence()
+clear()
