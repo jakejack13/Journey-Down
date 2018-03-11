@@ -3,14 +3,14 @@ def intro_sequence() :
     input()
     print("You find yourself standing at the mouth of a cave, with no memory of who you are or how you have gotten there.")
     input()
-    print("Sunlight streams into the cavern from behind you, but you can only see it slant downwards into the abyss, where only shadows can touch.")
+    print("Sunlight streams into the cavern from behind you, but you can barely see it slant downwards into the abyss, where only shadows can touch.")
     input()
     print("You don’t know why, but you feel drawn to the cave, feel it calling to you. You look through your memories, but, of course, you cannot find anything.")
     input()
     print("The cave seems to be the answer to your problems.")
     input()
     while True :
-        intro_decision = input("Will you check the cave, the sunlight behind you, or continue on your quest? ")
+        intro_decision = input("Will you check the cave, the sunlight behind you, or continue on your quest? ").lower()
         if intro_decision == "sunlight" :
             print("You check the sunlight behind you. You are standing at the edge of ledge, looking down into a valley filled with trees.")
             input()
