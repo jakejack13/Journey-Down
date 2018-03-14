@@ -12,7 +12,7 @@ def intro_sequence() :
     while True :
         intro_decision = input("Will you check the cave, the sunlight behind you, or continue on your quest? ").lower()
         if intro_decision == "sunlight" :
-            print("You check the sunlight behind you. You are standing at the edge of ledge, looking down into a valley filled with trees.")
+            print("You check the sunlight behind you. You are standing at the edge of the ledge, looking down into a valley filled with trees.")
             input()
             print("Beyond the valley, the ocean looms out as far as the eye can see, touching the horizon. There seems to be no sign of human activity anywhere.")
             input()
@@ -44,3 +44,10 @@ def intro_sequence() :
     input()
     print("Determination growing even stronger, you set off onto your Journey Down.")
     input()
+
+def room_sequence(room,state) :
+    room_num = int(room)
+    if room_num == 0 :
+        intro_sequence()
+    if room_num == 1 :
+        print("Congrats! You made it to room 1.")

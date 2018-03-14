@@ -4,6 +4,7 @@ import os
 clear = lambda: os.system('cls')
 from functions import new_save
 from functions import load_save
+from functions import save_game
 from sequences import intro_sequence
 
 game_state = 0
@@ -25,13 +26,16 @@ while True :
         continue
     break
 stats = load_save()
-player_name = stats[0]
+stat_name = stats[0]
+stat_room = stats[1]
 print("Game loaded")
-print("Welcome, " + player_name)
+print("Welcome, " + stat_name)
 input("Press enter to continue...")
 clear()
 
 #New game tutorial and beginning sequence
 if new_game == 1 :
     intro_sequence()
+    stat_room = 1
+    save_game(stat_name,stat_room)
 clear()

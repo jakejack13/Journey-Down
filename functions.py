@@ -2,7 +2,7 @@ def new_save(name) :
     s_file = open("save.txt","w")
     #Name, Lvl, Atk, Def
     #Stats may not be included
-    s_file.write(name + "#0" + "#0" + "#0")
+    s_file.write(name + "#0#0")
     s_file.close()
 def load_save() :
     s_file = open("save.txt","r")
@@ -10,3 +10,7 @@ def load_save() :
     stats = save_data.split("#")
     s_file.close()
     return stats
+def save_game(name,room,state) :
+    s_file = open("save.txt","w")
+    s_file.write(name + "#" + str(room) + "#" + str(state))
+    
