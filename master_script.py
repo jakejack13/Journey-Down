@@ -6,6 +6,7 @@ from functions import new_save
 from functions import load_save
 from functions import save_game
 from sequences import intro_sequence
+from sequences import room_sequence
 
 game_state = 0
 print("Journey Down")
@@ -28,6 +29,7 @@ while True :
 stats = load_save()
 stat_name = stats[0]
 stat_room = stats[1]
+stat_state = stats[2]
 print("Game loaded")
 print("Welcome, " + stat_name)
 input("Press enter to continue...")
@@ -37,5 +39,7 @@ clear()
 if new_game == 1 :
     intro_sequence()
     stat_room = 1
-    save_game(stat_name,stat_room)
+    save_game(stat_name,stat_room,stat_state)
 clear()
+while True :
+    room_sequence(stat_room,stat_state)
