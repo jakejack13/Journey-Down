@@ -44,10 +44,31 @@ def intro_sequence() :
     input()
     print("Determination growing even stronger, you set off onto your Journey Down.")
     input()
+    return 2
 
 def room_sequence(room,state) :
-    room_num = int(room)
+    room_num = room
     if room_num == 0 :
         intro_sequence()
+        return True
     if room_num == 1 :
-        print("Congrats! You made it to room 1.")
+        print("You walk into a small space that seems to resemble a room. The walls, ceiling, and floor are smooth and flat, chiseled and sanded out of the rock with precision.")
+        input()
+        print("There are three doors, one on each wall. They are made out of solid oak wood, with polished brass knobs.")
+        input()
+        r_one_decision = input("Do you open the left door, center door, or right door? ").lower()
+        if r_one_decision == "left" :
+            return 3
+        elif r_one_decision == "center" :
+            return 4
+        elif r_one_decision == "right" :
+            return 5
+    if room_num == 3 :
+        print("Room 3")
+        return 0
+    if room_num == 4 :
+        print("Room 4")
+        return 0
+    if room_num == 5 :
+        print("Room 5")
+        return 0

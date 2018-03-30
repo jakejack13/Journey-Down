@@ -28,7 +28,7 @@ while True :
     break
 stats = load_save()
 stat_name = stats[0]
-stat_room = stats[1]
+stat_room = int(stats[1])
 stat_state = stats[2]
 print("Game loaded")
 print("Welcome, " + stat_name)
@@ -42,4 +42,9 @@ if new_game == 1 :
     save_game(stat_name,stat_room,stat_state)
 clear()
 while True :
-    room_sequence(stat_room,stat_state)
+    #Prevents infinite loop if room not finished
+    if stat_room == 0 :
+        break
+    stat_room = room_sequence(stat_room,stat_state)
+    save_game(stat_name,stat_room,stat_state)
+    clear()
