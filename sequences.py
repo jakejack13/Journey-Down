@@ -1,5 +1,6 @@
+#Long sequence, created separate function
 def intro_sequence() :
-    print("Tutorial: Press enter to advance through dialogue. Type in commands when given a prompt. (Press enter to continue.)")
+    print("Tutorial: Press enter to advance through dialogue. Type in commands when given a prompt. Commands are usually indicated in captial letters. (Press enter to continue.)")
     input()
     print("You find yourself standing at the mouth of a cave, with no memory of who you are or how you have gotten there.")
     input()
@@ -10,7 +11,7 @@ def intro_sequence() :
     print("The cave seems to be the answer to your problems.")
     input()
     while True :
-        intro_decision = input("Will you check the cave, the sunlight behind you, or continue on your quest? ").lower()
+        intro_decision = input("Will you check the CAVE, the SUNLIGHT behind you, or CONTINUE on your quest? ").lower()
         if intro_decision == "sunlight" :
             print("You check the sunlight behind you. You are standing at the edge of the ledge, looking down into a valley filled with trees.")
             input()
@@ -44,31 +45,44 @@ def intro_sequence() :
     input()
     print("Determination growing even stronger, you set off onto your Journey Down.")
     input()
-    return 2
+    return 1
 
 def room_sequence(room,state) :
     room_num = room
     if room_num == 0 :
+        #Redundant, autoruns intro if new game selected, run in case close during intro
         intro_sequence()
-        return True
-    if room_num == 1 :
+        return 1
+    elif room_num == 1 :
         print("You walk into a small space that seems to resemble a room. The walls, ceiling, and floor are smooth and flat, chiseled and sanded out of the rock with precision.")
         input()
         print("There are three doors, one on each wall. They are made out of solid oak wood, with polished brass knobs.")
         input()
-        r_one_decision = input("Do you open the left door, center door, or right door? ").lower()
-        if r_one_decision == "left" :
-            return 3
-        elif r_one_decision == "center" :
-            return 4
-        elif r_one_decision == "right" :
-            return 5
-    if room_num == 3 :
+        r_one_decision = input("Do you open the LEFT door, CENTER door, or RIGHT door? ").lower()
+        #Decision to room 3,4,5
+        while True :
+            if r_one_decision == "left" :
+                return 3
+                break
+            elif r_one_decision == "center" :
+                return 4
+                break
+            elif r_one_decision == "right" :
+                return 5
+                break
+            else :
+                print("Sorry, that is not a correct command. Please input a correct command.")
+                continue
+    elif room_num == 3 :
         print("Room 3")
-        return 0
-    if room_num == 4 :
+        return False
+    elif room_num == 4 :
         print("Room 4")
-        return 0
-    if room_num == 5 :
+        return False
+    elif room_num == 5 :
         print("Room 5")
-        return 0
+        return False
+
+    else :
+        print("Congrats! You broke the game.Just for that, I'll corrupt your save file for you. No need to thank me.")
+        return False

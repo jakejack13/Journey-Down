@@ -1,3 +1,4 @@
+#Import game functions + extra functionality
 import os.path
 from pathlib import Path
 import os
@@ -16,6 +17,7 @@ while True :
     new_or_load = int(input("Would you like to make a new game (1) or load a previous game (2): "))
     my_file = Path("save.txt")
     if new_or_load == 1:
+        #Add system to replace hashtags
         new_save(input("Please enter your name: "))
         new_game = 1
         print("New save created")
