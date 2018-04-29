@@ -59,16 +59,16 @@ def room_sequence(room,state) :
         print("There are three doors, one on each wall. They are made out of solid oak wood, with polished brass knobs.")
         input()
         r_one_decision = input("Do you open the LEFT door, CENTER door, or RIGHT door? ").lower()
-        #Decision to room 3,4,5
+        #Decision to room 2,3,4
         while True :
             if r_one_decision == "left" :
-                return 3
+                return 2
                 break
             elif r_one_decision == "center" :
-                return 4
+                return 3
                 break
             elif r_one_decision == "right" :
-                return 5
+                return 4
                 break
             else :
                 print("Sorry, that is not a correct command. Please input a correct command.")
