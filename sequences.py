@@ -58,21 +58,37 @@ def room_sequence(room,state) :
         input()
         print("There are three doors, one on each wall. They are made out of solid oak wood, with polished brass knobs.")
         input()
-        r_one_decision = input("Do you open the LEFT door, CENTER door, or RIGHT door? ").lower()
+        r1_d = input("Do you open the LEFT door, CENTER door, or RIGHT door? ").lower()
         #Decision to room 2,3,4
         while True :
-            if r_one_decision == "left" :
+            if r1_d == "left" :
                 return 2
                 break
-            elif r_one_decision == "center" :
+            elif r1_d == "center" :
                 return 3
                 break
-            elif r_one_decision == "right" :
+            elif r1_d == "right" :
                 return 4
                 break
             else :
                 print("Sorry, that is not a correct command. Please input a correct command.")
                 continue
+    elif room_num == 2 :
+        print("You enter a room similar to the last, with the same sandstone walls and wooden doors.")
+        input()
+        print("However, there is a slight difference in this room. Standing in the corner is a simple wooden stool, made out of the same wood as the doors.")
+        input()
+        print("On it is a small leatherbound book. There are no markings on it except for a blue ribbon sticking out of the middle.")
+        input()
+        r2_d = input("Do you INSPECT the book or go through one of the DOORS? ").lower()
+        while True:
+            if r2_d == "inspect" :
+                #Add sequence for inspection of items (different input into func?)
+                return False
+            elif r2_d == "doors" :
+                #Go to different "room" for door selection here?
+                return 5
+        return False
     elif room_num == 3 :
         print("Room 3")
         return False
