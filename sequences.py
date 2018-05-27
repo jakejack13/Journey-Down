@@ -87,8 +87,23 @@ def room_sequence(room,state) :
                 return False
             elif r2_d == "doors" :
                 #Go to different "room" for door selection here?
-                return 5
-        return False
+                r2_d2 = input("Do you go through the LEFT door, MIDDLE door, or RIGHT door?").lower()
+                    while True:
+                        if r2_d2 == "left" :
+                            return 6
+                            break
+                        elif r2_d2 == "middle" :
+                            return 7
+                            break
+                        elif r2_d2 == "right" :
+                            return 8
+                            break
+                        else :
+                            print("Sorry, that is not a correct command. Please input a correct command.")
+                            continue
+            else :
+                print("Sorry, that is not a correct command. Please input a correct command.")
+                continue
     elif room_num == 3 :
         print("Room 3")
         return False
@@ -98,7 +113,13 @@ def room_sequence(room,state) :
     elif room_num == 5 :
         print("Room 5")
         return False
+    elif room_num == 6 :
+        return False
+    elif room_num == 7 :
+        return False
+    elif room_num == 8 :
+        return False
 
     else :
-        print("Congrats! You broke the game.Just for that, I'll corrupt your save file for you. No need to thank me.")
+        print("Congrats! You broke the game. Just for that, I'll corrupt your save file for you. No need to thank me.")
         return False
