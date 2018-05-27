@@ -47,6 +47,6 @@ while True :
     #Prevents infinite loop if room not finished
     if stat_room == 0 :
         break
-    stat_room = room_sequence(stat_room,stat_state)
+    stat_room = room_sequence(stat_name,stat_room,stat_state)
     save_game(stat_name,stat_room,stat_state)
     clear()

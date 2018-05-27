@@ -47,7 +47,7 @@ def intro_sequence() :
     input()
     return 1
 
-def room_sequence(room,state) :
+def room_sequence(name,room,state) :
     room_num = room
     if room_num == 0 :
         #Redundant, autoruns intro if new game selected, run in case close during intro
@@ -83,8 +83,15 @@ def room_sequence(room,state) :
         r2_d = input("Do you INSPECT the book or go through one of the DOORS? ").lower()
         while True:
             if r2_d == "inspect" :
-                #Add sequence for inspection of items (different input into func?)
-                return False
+                print("You pick up the book and flip through the pages. It seems to be a journal of some kind.")
+                input()
+                print("There are dates written at the top of every page, but there isn't any writing in the book. You flip to the page that is marked by the blue ribbon.")
+                input()
+                print("On it is a name: " + name + ". Nothing else is written.")
+                input()
+                print("There is a glimmer of recognition in your mind after seeing the name, but you are not sure why. You decide to keep the book.")
+                input()
+                continue
             elif r2_d == "doors" :
                 #Go to different "room" for door selection here?
                 r2_d2 = input("Do you go through the LEFT door, MIDDLE door, or RIGHT door?").lower()
