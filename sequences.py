@@ -112,7 +112,12 @@ def room_sequence(name,room,state) :
                 print("Sorry, that is not a correct command. Please input a correct command.")
                 continue
     elif room_num == 3 :
-        print("Room 3")
+        print("You enter a room similar to the last, with the same sandstone walls and wooden doors.")
+        input()
+        print("However, there is a slight difference in this room. Standing in the corner is an old dresser, made from the same wood as the doors.")
+        input()
+        print("There is a large keyhole set into the wood. The dresser seems to be locked.")
+        input()
         return False
     elif room_num == 4 :
         print("Room 4")
