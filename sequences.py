@@ -1,6 +1,6 @@
 #Long sequence, created separate function
 def intro_sequence() :
-    print("Tutorial: Press enter to advance through dialogue. Type in commands when given a prompt. Commands are usually indicated in captial letters. (Press enter to continue.)")
+    print("Tutorial: Press enter to advance through dialogue. Type in commands when given a prompt. Commands are usually indicated in capital letters. (Press enter to continue.)")
     input()
     print("You find yourself standing at the mouth of a cave, with no memory of who you are or how you have gotten there.")
     input()
@@ -95,19 +95,19 @@ def room_sequence(name,room,state) :
             elif r2_d == "doors" :
                 #Go to different "room" for door selection here?
                 r2_d2 = input("Do you go through the LEFT door, MIDDLE door, or RIGHT door?").lower()
-                    while True:
-                        if r2_d2 == "left" :
-                            return 6
-                            break
-                        elif r2_d2 == "middle" :
-                            return 7
-                            break
-                        elif r2_d2 == "right" :
-                            return 8
-                            break
-                        else :
-                            print("Sorry, that is not a correct command. Please input a correct command.")
-                            continue
+                while True:
+                    if r2_d2 == "left" :
+                        return 6
+                        break
+                    elif r2_d2 == "middle" :
+                        return 7
+                        break
+                    elif r2_d2 == "right" :
+                        return 8
+                        break
+                    else :
+                        print("Sorry, that is not a correct command. Please input a correct command.")
+                        continue
             else :
                 print("Sorry, that is not a correct command. Please input a correct command.")
                 continue

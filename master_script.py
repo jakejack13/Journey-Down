@@ -3,9 +3,9 @@ import os.path
 from pathlib import Path
 import os
 clear = lambda: os.system('cls')
-from functions import new_save
-from functions import load_save
-from functions import save_game
+from utility import new_save
+from utility import load_save
+from utility import save_game
 from sequences import intro_sequence
 from sequences import room_sequence
 
